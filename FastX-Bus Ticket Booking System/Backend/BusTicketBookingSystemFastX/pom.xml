@@ -107,6 +107,37 @@
 
     <build>
         <plugins>
+        
+        <plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <configuration>
+        <layers>
+            <enabled>true</enabled>
+        </layers>
+    </configuration>
+</plugin>
+
+
+<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.3.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <imageName>name-of-docker-image</imageName>
+                </configuration>
+            </plugin>
+
+
+
 
             <!-- Compiler Plugin (for Lombok) -->
             <plugin>
