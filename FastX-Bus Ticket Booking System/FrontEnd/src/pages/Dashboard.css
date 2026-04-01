@@ -1,0 +1,139 @@
+.dashboard-page {
+    padding: 3rem 0;
+}
+
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+}
+
+.sidebar {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    height: fit-content;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.user-details {
+    text-align: center;
+}
+
+.user-details h3 {
+    font-size: 1.25rem;
+}
+
+.user-details p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-nav button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: transparent;
+    color: var(--text-muted);
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.sidebar-nav button:hover, .sidebar-nav button.active {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+}
+
+.sidebar-nav button.active {
+    border-left: 3px solid var(--primary);
+}
+
+.logout-item {
+    margin-top: 2rem;
+    color: var(--accent) !important;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.content-card h2 {
+    margin-bottom: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1rem;
+    border: 1px solid var(--glass-border);
+}
+
+.stat-card label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.placeholder-content {
+    padding: 4rem;
+    text-align: center;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px dashed var(--glass-border);
+    border-radius: 1rem;
+}
+
+@media (max-width: 900px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+}
